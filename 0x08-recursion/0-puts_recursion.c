@@ -1,4 +1,3 @@
-#include <stdio.h>
 #include "main.h"
 
 /**
@@ -8,6 +7,12 @@
  */
 void _puts_recursion(char *s)
 {
-	printf("Puts with recursion\n");
-	return (0);
+	if (*s)
+	{
+		_putchar(*s);
+		_puts_recursion(s + 1);
+
+	}
+	else
+		_putchar('\n');
 }
